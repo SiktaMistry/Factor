@@ -1,0 +1,91 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --device-id=emulator-5554 --start-paused --profile --dart-define=flutter.inspector.structuredErrors=true lib\main.dart
+
+## exception
+
+FileSystemException: FileSystemException: Cannot retrieve modification time, path = 'D:\Apps\factormain\pubspec.yaml' (OS Error: The operation completed successfully.
+, errno = 0)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:629:7)
+#1      _File.lastModifiedSync (dart:io/file_impl.dart:436:5)
+#2      ForwardingFile.lastModifiedSync (package:file/src/forwarding/forwarding_file.dart:57:43)
+#3      ForwardingFile.lastModifiedSync (package:file/src/forwarding/forwarding_file.dart:57:43)
+#4      _DefaultPub.get (package:flutter_tools/src/dart/pub.dart:322:21)
+#5      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1407:17)
+<asynchronous suspension>
+#6      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1257:27)
+<asynchronous suspension>
+#7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#8      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:283:9)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:64:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.7.3, on Microsoft Windows [Version 10.0.19045.2604], locale en-IN)
+    • Flutter version 3.7.3 on channel stable at C:\flutter\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 9944297138 (7 weeks ago), 2023-02-08 15:46:04 -0800
+    • Engine revision 248290d6d5
+    • Dart version 2.19.2
+    • DevTools version 2.20.1
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+    • Android SDK at C:\Users\SIKTA\AppData\Local\Android\sdk
+    • Platform android-33-ext4, build-tools 33.0.2
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.15+0-b2043.56-9505619)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.4.5)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.4.33403.182
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2022.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.15+0-b2043.56-9505619)
+
+[✓] VS Code (version 1.76.2)
+    • VS Code at C:\Users\SIKTA\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.60.0
+
+[✓] Connected device (4 available)
+    • Android SDK built for x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)                  • windows       • windows-x64    • Microsoft Windows [Version 10.0.19045.2604]
+    • Chrome (web)                       • chrome        • web-javascript • Google Chrome 111.0.5563.146
+    • Edge (web)                         • edge          • web-javascript • Microsoft Edge 111.0.1661.54
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
